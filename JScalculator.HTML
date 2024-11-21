@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            margin-top: 25vh;
+            margin-left: calc(50vw - 110px);
+        }
+        button{
+            width:55px;
+            height:50px;
+        }
+
+        #keyContainer{
+            border: 0px;
+            display: flex;
+            flex-wrap:wrap;
+            height:200px;
+            width:220px;
+        }
+
+        #lastRow{
+            
+            height: 50px;
+            width:220px;
+            display: flex;
+        }
+        #no0{
+            width:110px;
+        }
+
+
+
+        #output{
+            
+            height: 65px;
+            width:214px;
+            text-align: right;
+            color: white;
+            background-color: #454647;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .first3{
+            background-color: #575859;
+            color: white;
+        }
+        .operator{
+            background-color: #ff9f09;
+            color: white;
+        }
+        .num{
+            background-color: #737474;
+            color: white;
+        }
+
+        #no0{
+            border-radius: 0px 0px 0px 10px;
+        }
+
+        #equal{
+            border-radius: 0px 0px 10px 0px;
+        }
+
+        
+
+    </style>
+
+
+</head>
+<body>
+
+    <div id="maindiv">
+    <div id="display">
+        <input type="text" id="output" >
+    </div>
+
+    <div id="keyContainer">
+        <button class="first3" id="clear" onclick="clearAll()">AC</button>
+        <button class="first3" id="plusORminus" onclick="negate()">+/-</button>
+        <button class="first3" id="percent" onclick="percent()">%</button>
+        <button class="operator" id="divide" onclick="basicoperator('/')">/</button>
+
+        <button class="num" id="no7" onclick="numberFunc(7)">7</button>
+        <button class="num" id="no8" onclick="numberFunc(8)">8</button>
+        <button class="num" id="no9" onclick="numberFunc(9)">9</button>
+        <button class="operator" id="multiply" onclick="basicoperator('*')">*</button>
+
+        <button class="num" id="no4" onclick="numberFunc(4)">4</button>
+        <button class="num" id="no5" onclick="numberFunc(5)">5</button>
+        <button class="num" id="no6" onclick="numberFunc(6)">6</button>
+        <button class="operator" id="sub" onclick="basicoperator('-')">-</button>
+
+        <button class="num" id="no1" onclick="numberFunc(1)">1</button>
+        <button class="num" id="no2" onclick="numberFunc(2)">2</button>
+        <button class="num" id="no3" onclick="numberFunc(3)">3</button>
+        <button class="operator" id="add" onclick="basicoperator('+')">+</button>
+    </div>
+    
+    <div id="lastRow">
+        <button class="num" id="no0" onclick="numberFunc(0)">0</button>
+        <button class="num" id="deci" onclick="decimal()">.</button>
+        <button class="operator" id="equal" onclick="equalFunc()">=</button>
+    </div>
+</div>
+
+    <script src="JsCalcPrac.js"></script>
+
+</body>
+</html>
